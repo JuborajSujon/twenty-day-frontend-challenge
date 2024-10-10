@@ -1,4 +1,6 @@
 import "./Country.css";
+import PropTypes from "prop-types";
+
 const Country = ({ country }) => {
   const { name, capital, region, population, flags } = country;
   return (
@@ -17,3 +19,7 @@ const Country = ({ country }) => {
 };
 
 export default Country;
+
+Country.propTypes = {
+  country: PropTypes.object.isRequired,
+};
